@@ -1,0 +1,134 @@
+/*          NOTES        */
+
+/*  
+Use transparency to get the color variations necessary to match the design. Hint: look into usin 'hsla'  
+
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+
+
+
+
+
+/*   import url   */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+/*       ROOT     */
+:root{
+    --ff: 'Figtree', sans-serif;
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --fw-tiny: 500;
+    --fw-normal: 700;
+    --fw-bold: 800;
+}
+
+
+
+
+/*         GLOBAL         */
+*{
+    font-family: var(--ff);
+    font-size: 18px;
+
+}
+
+
+
+
+
+/*  body  */
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* main  */
+main{
+    width: 375px;
+    margin: auto;
+}
+
+
+
+
+
+/*   Main-card  */
+.main-card{
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    border-radius: 0 0 30px 30px;
+    color: var(--white);
+}
+
+.main-card__result{
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.main-card__result__number{
+    font-size: 50px;
+    margin: 0;
+    font-weight: var(--fw-normal);
+}
+
+.main-card__result__average{
+    margin: 0;
+}
+
+
+
+/*  Summary-card   */
+.summary-card{
+    padding: 30px;
+    margin: auto;
+}
+
+.summary-card__results__1st, .summary-card__results__2nd, .summary-card__results__3st, .summary-card__results__4rd {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+button{
+    background-color: var(--dark-gray-blue);
+    padding: 12px;
+    width: 100%;
+    border-radius: 30px;
+    color: var(--white);
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
