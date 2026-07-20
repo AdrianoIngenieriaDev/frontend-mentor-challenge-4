@@ -125,11 +125,43 @@ main{
     margin: auto;
 }
 
-.summary-card__results__1st, .summary-card__results__2nd, .summary-card__results__3st, .summary-card__results__4rd {
+.summary-card__results{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 12px;
 }
 
+.summary-card__results__1st,
+.summary-card__results__2nd,
+.summary-card__results__3st,
+.summary-card__results__4rd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 20px;
+    border-radius: 12px;
+    font-weight: var(--fw-normal);
+}
+
+.summary-card__results__1st {
+    background-color: hsla(0, 100%, 67%, 0.1);
+    color: var(--light-red);
+}
+
+.summary-card__results__2nd {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    color: var(--orangey-yellow);
+}
+
+.summary-card__results__3st {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    color: var(--green-teal);
+}
+
+.summary-card__results__4rd {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    color: var(--cobalt-blue);
+}
 
 button{
     background-color: var(--dark-gray-blue);
@@ -140,4 +172,50 @@ button{
     border: none;
     margin-top: 20px;
     margin-bottom: 0;
+}
+
+@media (min-width: 1440px) {
+    body {
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--pale-blue);
+    }
+
+    main {
+        width: 736px;
+        display: flex;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .main-card {
+        width: 50%;
+        padding: 40px 54px;
+        border-radius: 20px;
+    }
+
+    .main-card__result {
+        width: 170px;
+        height: 170px;
+        margin-bottom: 28px;
+    }
+
+    .main-card__result__number {
+        font-size: 64px;
+    }
+
+    .summary-card {
+        width: 50%;
+        padding: 40px 40px;
+        margin: 0;
+    }
+
+    .summary-card__results__1st,
+    .summary-card__results__2nd,
+    .summary-card__results__3st,
+    .summary-card__results__4rd {
+        padding: 14px 16px;
+    }
 }
